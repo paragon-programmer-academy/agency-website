@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    height: 100vh;
+    background-image: linear-gradient(rgba(27, 22, 22, 0.5), rgb(61, 63, 53)), url("bg-image2.jpg") ;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo{
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+}
+.navigation{
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+ul li::after{
+    content: '';
+    height: 4px;
+    width: 0;
+    background: goldenrod;
+    position:absolute;
+    left: 0;
+    top: 20px;
+    transition: 0.5s;
+}
+
+ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: whitesmoke;
+}
+
+.content h1{
+    font-size: 50px;
+
+}
+
+.btn{
+    width: 200px;
+    padding: 15px 5px;
+    text-align:center;
+    margin: 20px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    color: whitesmoke;
+    background: transparent;
+    border-radius: 30px;
+    border: 3px solid goldenrod;
+    position: relative;
+}
+
+
+span{
+    background: goldenrod;
+    height:  100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 30px;
+    z-index: -1;
+
+    transition: 0.5s;
+}
+.btn:hover span{
+    width: 100%;
+}
+
+.btn:hover{
+    border: none;
+}
